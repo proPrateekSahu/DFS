@@ -1,0 +1,14 @@
+void DFS(int vertex){
+    vis[vertex]=true;//taking action on vertex after entering the vertex
+    cout<<vertex<<endl;
+    for(auto child:graph[vertex]){
+        //taking action on the child before entering the child
+        cout<<"par"<<vertex<<", child "<<child<<endl;
+        if(vis[child]!=true){
+            
+            DFS(child);
+            //taking action on child after exiting child node
+        }
+    }
+    //taking action on vertex before exiting the vertex
+}
